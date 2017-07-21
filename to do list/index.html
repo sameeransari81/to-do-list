@@ -7,21 +7,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 	p{
-		border: 2px solid red;
+		border: 0.5px solid black;
 	}
 
 </style>
 </head>
 <body>
 <div ng-controller='mainController'>
-<input type="text" placeholder="add title" ng-model="Todo.title">
-<input type="text" placeholder="add detail" ng-model="Todo.detail">
+<input type="text" placeholder="Search" ng-model="query">
+<input type="text" placeholder="Add Title" ng-model="Todo.title">
+<input type="text" placeholder="Add Details" ng-model="Todo.detail">
 <button ng-click="addwork(Todo.title, Todo.detail)">Add title</button>
 
 <ul>
-	<li ng-repeat="list in Todos">
-	<h2>{{list.title}}</h2>	
-	<p>{{list.details }}</p>
+	<li ng-repeat="list in Todos | filter: query">
+	<h2>{{list.title | uppercase}}</h2>	
+	<p font-style:"italic">{{list.details }}</p>
 	<button class="btn btn-default btn-sm"  ng-click="deletework(list)"><span class="glyphicon glyphicon-trash">Delete Work</button>
 
 	</li>
