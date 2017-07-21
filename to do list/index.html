@@ -2,9 +2,31 @@
 <head>
 	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
+<style>
+	p{
+		border: 2px solid red;
+	}
+
+</style>
 </head>
 <body>
-<div ng-controller='mainController'></div>
+<div ng-controller='mainController'>
+
+<input type="text" ng-model="list.work">
+<button ng-click="addwork(list.work)">Add Work</button>
+
+<ul>
+	<li ng-repeat="list in Todos">
+	<h2>{{list.title}}</h2>	
+	<p>{{list.details }}</p>
+	<button ng-click="deletework(list)">Delete Work</button>
+
+	</li>
+
+</ul>
+</div>
+
+</ul>
 </body>
 
 </html>	
