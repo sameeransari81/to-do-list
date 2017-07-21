@@ -1,1 +1,5 @@
-var ngtodo = angular.module('ngtodo',[]);
+var ngTodo = angular.module('ngTodo',[]);
+
+ngTodo.controller('mainController', function($scope) {
+	
+});
