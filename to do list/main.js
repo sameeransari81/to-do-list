@@ -13,8 +13,12 @@ ngTodo.controller('mainController', function($scope) {
 		'title':'assignment',
 		'details':'i must do my assignment'
 	}]
-	$scope.addwork = function(work){
-		$scope.Todos.push(work);
+	$scope.addwork = function(title, detail){
+		$scope.Todos.push({
+			title: title,
+			details: detail
+		});
+		
 	}
 	$scope.deletework = function(work){
 		var index = $scope.Todos.indexOf(work);
