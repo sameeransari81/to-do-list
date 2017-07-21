@@ -20,8 +20,7 @@ ngTodo.controller('mainController', function($scope) {
 		});
 		
 	}
-	$scope.deletework = function(work){
-		var index = $scope.Todos.indexOf(work);
+	$scope.deletework = function(index){
 		$scope.Todos.splice(index , 1);
 	}
 	
