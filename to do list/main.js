@@ -1,0 +1,1 @@
+var ngtodo = angular.module('ngtodo',[]);
